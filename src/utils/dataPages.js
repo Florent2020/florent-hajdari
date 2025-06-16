@@ -12,7 +12,7 @@ export const links = [
   {
     id: 3,
     text: "services",
-    url: "services",
+    url: "/services",
   },
   {
     id: 4,

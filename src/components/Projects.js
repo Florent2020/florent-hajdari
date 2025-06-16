@@ -2,11 +2,26 @@ import React, { useState } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import styled from "styled-components";
 import projects from "./dataProjects";
+import { motion } from "framer-motion";
 
 function Projects({ id }) {
   const [showAll, setShowAll] = useState(false);
 
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    }),
+  };
 
   return (
     <Wrapper id={id}>
@@ -15,12 +30,20 @@ function Projects({ id }) {
         <Row>
           {visibleProjects.map((project) => (
             <Col key={project.id} xs={12} sm={6} md={4}>
-              <ProjectCard onClick={() => window.open(project.url, "_blank")}>
-                <img src={project.image} alt={project.project} />
-                <div className="overlay">
-                  <h5>{project.project}</h5>
-                </div>
-              </ProjectCard>
+              <motion.div
+                custom={project.id}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              >
+                <ProjectCard onClick={() => window.open(project.url, "_blank")}>
+                  <img src={project.image} alt={project.project} />
+                  <div className="overlay">
+                    <h5>{project.project}</h5>
+                  </div>
+                </ProjectCard>
+              </motion.div>
             </Col>
           ))}
         </Row>
@@ -178,6 +201,13 @@ const ProjectCard = styled.div`
     h5 {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    h5 {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
   }
 `;

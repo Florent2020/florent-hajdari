@@ -154,6 +154,7 @@ const NavContainer = styled.nav`
     background-color: #000000;
     height: calc(100vh - 80px);
     text-align: center;
+    justify-content: space-evenly;
     text-transform: uppercase;
     letter-spacing: 2px;
     transform: translateY(-200%);
@@ -162,6 +163,7 @@ const NavContainer = styled.nav`
 
   .nav-active {
     transform: translateY(0%);
+    padding-left: 0;
   }
 
   .nav-links a {

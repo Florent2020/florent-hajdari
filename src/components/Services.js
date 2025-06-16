@@ -2,39 +2,60 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { FaPencilRuler, FaLaptopCode, FaSearch } from "react-icons/fa";
+import { motion } from "framer-motion"; // ✅ NEW
 
 function Services({ id }) {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        delay: i * 0.3,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
     <Wrapper id={id}>
       <div className="container">
         <h2>My Services</h2>
         <Row>
-          <Col xs={12} md={4}>
-            <FaPencilRuler />
-            <h4>Web Design</h4>
-            <p>
-              I create visually appealing and responsive web designs that
-              deliver great user experiences across all modern devices and
-              screen sizes.
-            </p>
-          </Col>
-          <Col xs={12} md={4}>
-            <FaLaptopCode className="web-dev" />
-            <h4>Web Develoment</h4>
-            <p>
-              I develop robust, fast-loading websites with clean, maintainable
-              code, ensuring strong performance and smooth user interaction.
-            </p>
-          </Col>
-          <Col xs={12} md={4}>
-            <FaSearch />
-            <h4>SEO</h4>
-            <p>
-              I improve website visibility on search engines through smart SEO
-              strategies, helping your business attract more organic traffic and
-              leads.
-            </p>
-          </Col>
+          {[
+            // Wrap columns in an array for index control
+            {
+              icon: <FaPencilRuler />,
+              title: "Web Design",
+              text: "I create visually appealing and responsive web designs that deliver great user experiences across all modern devices and screen sizes.",
+            },
+            {
+              icon: <FaLaptopCode className="web-dev" />,
+              title: "Web Development",
+              text: "I develop robust, fast-loading websites with clean, maintainable code, ensuring strong performance and smooth user interaction.",
+            },
+            {
+              icon: <FaSearch />,
+              title: "SEO",
+              text: "I improve website visibility on search engines through smart SEO strategies, helping your business attract more organic traffic and leads.",
+            },
+          ].map((service, i) => (
+            <Col xs={12} md={4} key={i}>
+              <motion.div
+                custom={i}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {service.icon}
+                <h4>{service.title}</h4>
+                <p>{service.text}</p>
+              </motion.div>
+            </Col>
+          ))}
         </Row>
       </div>
     </Wrapper>
@@ -70,6 +91,13 @@ const Wrapper = styled.section`
     margin-right: 3.333333%;
     padding: 30px;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* ✅ NEW */
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-8px); /* ✅ subtle lift on hover */
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* ✅ soft shadow */
+    }
   }
 
   .col-md-4:last-of-type,
@@ -80,6 +108,12 @@ const Wrapper = styled.section`
   svg {
     font-size: 50px;
     color: #1e7f62;
+    transition: transform 0.3s ease; /* ✅ NEW */
+  }
+
+  .col-md-4:hover svg,
+  .col-12:hover svg {
+    transform: scale(1.15); /* ✅ icon grows slightly on hover */
   }
 
   .web-dev {

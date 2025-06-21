@@ -2,9 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Portfolio from "./components/Portfolio";
-// import Career from "./pages/CareerPage";
-// import CareerDetail from "./pages/career/CareerDetails";
-// import Error from "./pages/ErrorPage";
 import Footer from "./components/Footer";
 
 import "./App.css";

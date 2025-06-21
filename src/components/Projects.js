@@ -10,14 +10,20 @@ function Projects({ id }) {
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    hidden: (i) => ({
+      opacity: 0,
+      x: i % 2 === 0 ? -50 : 50,
+      rotate: i % 2 === 0 ? -3 : 3,
+      scale: 0.95,
+    }),
     visible: (i) => ({
       opacity: 1,
-      y: 0,
+      x: 0,
+      rotate: 0,
       scale: 1,
       transition: {
         delay: i * 0.1,
-        duration: 0.5,
+        duration: 0.6,
         ease: "easeOut",
       },
     }),
@@ -28,10 +34,11 @@ function Projects({ id }) {
       <div className="container">
         <h2 className="title">My Projects</h2>
         <Row>
-          {visibleProjects.map((project) => (
+          {visibleProjects.map((project, i) => (
             <Col key={project.id} xs={12} sm={6} md={4}>
               <motion.div
-                custom={project.id}
+                layout
+                custom={i}
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -205,9 +212,20 @@ const ProjectCard = styled.div`
   }
 
   @media (hover: none) and (pointer: coarse) {
+    .overlay {
+      background: none;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0.75rem;
+    }
+
     h5 {
       opacity: 1 !important;
       transform: translateY(0) !important;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 6px 10px;
+      font-size: 1rem;
+      border-radius: 6px;
     }
   }
 `;

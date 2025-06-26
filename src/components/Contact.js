@@ -12,10 +12,10 @@ function Contact({ id }) {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_4p1qm02", // from EmailJS
-        "template_xoov5ia", // from EmailJS
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "eYboczHSuA6J2Md1t" // from EmailJS
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {

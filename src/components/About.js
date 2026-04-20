@@ -63,7 +63,7 @@ function About({ id }) {
                           </h5>
                         </Col>
                         <Col xs={12} md={6}>
-                          <h5>florent.hajdari@hotmail.com</h5>
+                          <h5>contact@florent-hajdari.com</h5>
                         </Col>
                       </Row>
                     </h4>

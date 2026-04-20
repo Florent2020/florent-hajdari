@@ -1,4 +1,5 @@
 import AlethraLink from "../assets/images/AlethraLink.png";
+import VivaNapoli from "../assets/images/viva-napoli-pizza.png";
 import gtNordics from "../assets/images/gt-nordics.png";
 import lokalnotodden from "../assets/images/lokalnotodden.png";
 import solheimfeltet from "../assets/images/solheimfeltet.png";
@@ -13,6 +14,12 @@ import winterSports from "../assets/images/winter-sports.png";
 import aquaPharm from "../assets/images/aqua-pharm.png";
 
 const projects = [
+  {
+    id: 1,
+    image: VivaNapoli,
+    project: "Viva Napoli Pizza",
+    url: "https://viva-napoli-pizza.vercel.app/",
+  },
   {
     id: 1,
     image: AlethraLink,

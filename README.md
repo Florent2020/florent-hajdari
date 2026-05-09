@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# 🚀 Florent Hajdari — Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern personal portfolio website built with React and styled-components, focused on clean UI, smooth UX, responsive layouts, and modern frontend development.
 
-## Available Scripts
+🌍 Live Website:  
+👉 https://florent-hajdari.com/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This portfolio represents my work, skills, and passion as a Front-end Developer specializing in:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- styled-components
+- Headless WordPress
+- Responsive Web Design
+- UI / UX Development
+- REST API Integration
+- Modern animations & interactions
 
-### `npm test`
+The goal of this project was to create a fast, modern, and professional portfolio experience with a strong visual identity and smooth user experience across all devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- styled-components
+- React Router DOM
+- Framer Motion
+- Axios
+- WordPress REST API
+- Responsive Design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Features
 
-### `npm run eject`
+✅ Fully Responsive Design  
+✅ Modern UI & Animations  
+✅ Sticky Navigation  
+✅ Smooth Page Transitions  
+✅ Dynamic Project Showcase  
+✅ Contact Form Integration  
+✅ Optimized Performance  
+✅ Mobile Friendly Layout  
+✅ Clean Component Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+src/
+ ├── components/
+ ├── utils/
+ ├── assets/
+ └── App.js
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚡ Performance & UX Focus
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project focuses heavily on:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Fast loading speed
+- Clean component architecture
+- Scalable frontend structure
+- Reusable styled-components
+- Smooth user experience
+- SEO-friendly structure
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Installation
 
-### Analyzing the Bundle Size
+Clone the project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+git clone https://github.com/Florent2020/florent-hajdari.git
+```
 
-### Making a Progressive Web App
+Go to the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+cd florent-hajdari
+```
 
-### Advanced Configuration
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm install
+```
 
-### Deployment
+Start development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm start
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌐 Deployment
+
+👉 https://florent-hajdari.com/
+
+---
+
+## 👨‍💻 Author
+
+### Florent Hajdari
+
+Front-end Developer based in Norway 🇳🇴
+
+🌍 Portfolio:  
+https://florent-hajdari.com/
+
+💻 GitHub:  
+https://github.com/Florent2020
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+## ⭐ Support
+
+If you like this project, feel free to give it a star on GitHub ⭐

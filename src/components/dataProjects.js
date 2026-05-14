@@ -16,7 +16,7 @@ const projects = [
     id: 1,
     image: estateNova,
     project: "EstateNova",
-    url: "https://estate-nova.vercel.app/",
+    url: "https://estate-nova-project.vercel.app/",
     description:
       "Luxury real estate React template with cinematic layouts, premium property showcases, agent dashboards and elegant UI crafted for modern agencies and developers.",
     tech: ["react", "styled", "design"],

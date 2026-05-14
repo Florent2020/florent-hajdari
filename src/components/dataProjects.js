@@ -1,3 +1,4 @@
+import estateNova from "../assets/images/estate-nova.png";
 import drShkodrani from "../assets/images/dr-shkodrani.png";
 import Holidaze from "../assets/images/holidaze.png";
 import AlethraLink from "../assets/images/AlethraLink.png";
@@ -13,6 +14,16 @@ import winterSports from "../assets/images/winter-sports.png";
 const projects = [
   {
     id: 1,
+    image: estateNova,
+    project: "EstateNova",
+    url: "https://estate-nova.vercel.app/",
+    description:
+      "Luxury real estate React template with cinematic layouts, premium property showcases, agent dashboards and elegant UI crafted for modern agencies and developers.",
+    tech: ["react", "styled", "design"],
+  },
+
+  {
+    id: 2,
     image: drShkodrani,
     project: "Dental Clinic - Dr. Shkodrani",
     url: "https://dr-shkodrani.vercel.app/",
@@ -21,7 +32,7 @@ const projects = [
     tech: ["react", "styled", "design"],
   },
   {
-    id: 2,
+    id: 3,
     image: VivaNapoli,
     project: "Viva Napoli Pizza",
     url: "https://viva-napoli-pizza.vercel.app/",
@@ -30,7 +41,7 @@ const projects = [
     tech: ["react", "styled", "design"],
   },
   {
-    id: 3,
+    id: 4,
     image: Holidaze,
     project: "World Class Accommodations - Holidaze",
     url: "https://holidaze.florent-hajdari.com/",
@@ -39,7 +50,7 @@ const projects = [
     tech: ["react", "wordpress", "api"],
   },
   {
-    id: 4,
+    id: 5,
     image: AlethraLink,
     project: "Alethralink",
     url: "https://alethralink.vercel.app/",
@@ -48,7 +59,7 @@ const projects = [
     tech: ["react", "styled", "animation"],
   },
   {
-    id: 5,
+    id: 6,
     image: gtNordics,
     project: "G.T Nordics AS",
     url: "https://gt-nordics-as.vercel.app/",
@@ -57,7 +68,7 @@ const projects = [
     tech: ["react", "styled", "design"],
   },
   {
-    id: 6,
+    id: 7,
     image: lokalnotodden,
     project: "Lokal-Notodden",
     url: "https://lokalnotodden.no/",
